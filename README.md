@@ -2,6 +2,35 @@
 
 Sistem manajemen ruangan berbasis web menggunakan Laravel 11 dan Filament PHP 3.
 
+## 🚀 Quick Start
+
+Jalankan aplikasi dengan mudah menggunakan installer script:
+
+### Windows
+```bash
+install-web.bat
+```
+
+### Linux/Mac
+```bash
+chmod +x install-web.sh
+./install-web.sh
+```
+
+Script ini akan otomatis:
+- ✅ Membuat file `.env` dari template
+- ✅ Install Composer dependencies
+- ✅ Generate application key
+- ✅ Install NPM dependencies
+- ✅ Build assets dengan Vite
+- ✅ Clear cache Laravel
+- ✅ Menjalankan migration
+- ✅ Start development server
+
+**Catatan:** Jangan lupa untuk import database `projectadm.sql` terlebih dahulu!
+
+---
+
 ## Fitur Utama
 
 ### User Side
@@ -228,6 +257,18 @@ Jalankan:
 ```powershell
 npm run build
 ```
+
+### Web tidak muncul / Blank page
+Aplikasi sudah dilengkapi dengan CDN fallback untuk Tailwind CSS. Jika Vite build gagal, styling akan otomatis di-load dari CDN. Untuk troubleshooting lengkap, lihat [TROUBLESHOOTING.md](TROUBLESHOOTING.md)
+
+### Masalah lainnya?
+Lihat dokumentasi lengkap di [TROUBLESHOOTING.md](TROUBLESHOOTING.md) untuk solusi masalah umum:
+- Web tidak bisa dibuka
+- Vite manifest not found
+- Error 500
+- Database connection error
+- Port already in use
+- Dan banyak lagi...
 
 ## Lisensi
 
