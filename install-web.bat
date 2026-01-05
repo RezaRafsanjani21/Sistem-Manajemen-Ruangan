@@ -70,6 +70,8 @@ php artisan view:clear
 
 echo.
 echo [7/8] Running database migrations...
+REM Note: --force flag is used for non-interactive installation
+REM WARNING: Only use this script in development environment!
 php artisan migrate --force
 if errorlevel 1 (
     echo WARNING: Migration failed

@@ -4,7 +4,9 @@
 # Linux/Mac Version
 # ========================================
 
-set -e  # Exit on error
+# Exit on error for critical commands
+# Some commands use || {} for non-critical failures (like build or migrate)
+set -e
 
 echo ""
 echo "========================================"
@@ -63,6 +65,8 @@ php artisan view:clear
 
 echo ""
 echo "[7/8] Running database migrations..."
+# Note: --force flag is used for non-interactive installation
+# WARNING: Only use this script in development environment!
 php artisan migrate --force || {
     echo "WARNING: Migration failed"
     echo "Make sure your database is configured in .env file"
